@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/config/app_theme.dart';
+import 'package:flutter_course/screens/yes_no/yes_no_screen.dart';
 
 class YesNoApp extends StatelessWidget {
   const YesNoApp({super.key});
@@ -9,9 +11,10 @@ class YesNoApp extends StatelessWidget {
       title: 'Yes No App',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: Text('Yes No App')),
-        body: Text('Yes or No'),
+        appBar: AppBar(title: Center(child: Text('Yes No App'))),
+        body: YesNoScreen(),
       ),
+      theme: AppTheme(selectedColor: 5).theme(),
     );
   }
 }
