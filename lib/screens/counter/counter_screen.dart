@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/screens/counter/counter_screen_option.dart';
+import 'package:flutter_course/screens/yes_no/yes_no_screen.dart';
 
 class CounterScreen extends StatefulWidget {
   const CounterScreen({super.key});
@@ -61,6 +62,18 @@ class _CounterScreenState extends State<CounterScreen> {
               });
             },
             icon: Icons.remove_rounded,
+          ),
+          const SizedBox(height: 10), // Espacio de 10 píxeles
+          CounterScreenOption(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => YesNoScreen(),
+                ),
+              );
+            },
+            icon: Icons.question_answer,
           ),
         ],
       ),

@@ -9,10 +9,9 @@ class CounterScreenOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  FloatingActionButton(
+    return FloatingActionButton(
       shape: shape ?? StadiumBorder(),
       elevation: 3,
-      
       onPressed: onPressed,
       child: Icon(icon),
     );

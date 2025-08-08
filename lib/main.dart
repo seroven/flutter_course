@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/screens/counter/counter_app.dart';
-import 'package:flutter_course/screens/yes_no/yes_no_app.dart';
+import 'package:flutter_course/screens/counter/counter_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +10,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return YesNoApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // initialRoute: Routes.counter,
+      // routes: {
+      //   Routes.counter: (context) => const CounterScreen(),
+      //   Routes.yesNo: (context) => const YesNoScreen()
+      // },
+      home: CounterScreen(),
+    );
   }
 }
