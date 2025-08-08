@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/screens/counter/counter_screen.dart';
+import 'package:flutter_course/routes/routes.dart';
 import 'package:flutter_course/screens/yes_no/yes_no_app_bar.dart';
 
 class YesNoScreen extends StatelessWidget {
@@ -12,10 +12,7 @@ class YesNoScreen extends StatelessWidget {
       body: Center(
         child: FilledButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CounterScreen()),
-            );
+            Navigator.of(context).pushNamed(Routes.counter);
           },
           child: Text('Go to Counter App'),
         ),
